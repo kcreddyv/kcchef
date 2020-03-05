@@ -23,19 +23,18 @@ steps:
 - checkout: git-experiment
   path: git-experiment
 - script: |
-     echo $(Agent.BuildDirectory)
-     dir $(Agent.BuildDirectory)/git-experiment
+     cd $(Agent.BuildDirectory)/git-experiment
      git tag something 
      git push something
 - checkout: package
   path: package
 - script: |
-     dir $(Agent.BuildDirectory)/package
+     cd $(Agent.BuildDirectory)/package
      git tag something 
      git push something
 - checkout: hello-world
   path: hello-world
 - script: |
-     dir $(Agent.BuildDirectory)/hello-world
+     cd $(Agent.BuildDirectory)/hello-world
      git tag something 
      git push something
