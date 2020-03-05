@@ -22,7 +22,6 @@ pool:
 steps:
 - checkout: git-experiment
 - script: |
-     dir git-experiment
      git tag something 
      git push something
 - checkout: package
