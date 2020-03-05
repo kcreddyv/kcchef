@@ -21,8 +21,8 @@ pool:
   
 steps:
 - checkout: git-experiment
-- script: git tag something && git push something
+- script: dir git-experiment && git tag something && git push something
 - checkout: package
-- script: git tag something && git push something
+- script: dir package && git tag something && git push something
 - checkout: hello-world
-- script: git tag something && git push something
+- script: dir hello-world && git tag something && git push something
