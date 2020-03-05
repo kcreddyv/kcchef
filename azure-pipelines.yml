@@ -2,17 +2,17 @@ resources:
   repositories:
   - repository: git-experiment
     type: github
-    endpoint: https://github.com
+    endpoint: github
     name: kcreddyv/git-experiment
     ref: master
   - repository: package
     type: github
-    endpoint: https://github.com
+    endpoint: github
     name: kcreddyv/package
     ref: master
   - repository: hello-world
     type: github
-    endpoint: https://github.com
+    endpoint: github
     name: kcreddyv/hello-world
     ref: master
 
