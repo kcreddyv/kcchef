@@ -21,15 +21,18 @@ pool:
   
 steps:
 - checkout: git-experiment
+  path: git-experiment
 # - script: |
 #      git tag something 
 #      git push something
 - checkout: package
+  path: package
 # - script: |
 #      dir package
 #      git tag something 
 #      git push something
 - checkout: hello-world
+  path: hello-world
 # - script: |
 #      dir hello-world
 #      git tag something 
