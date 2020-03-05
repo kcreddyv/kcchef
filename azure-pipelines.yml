@@ -16,6 +16,9 @@ resources:
     name: kcreddyv/hello-world
     ref: master
 
+pool:
+  vmImage: 'ubuntu-latest'
+  
 steps:
 - checkout: git-experiment
 - checkout: package
