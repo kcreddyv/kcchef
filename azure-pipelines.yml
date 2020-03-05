@@ -23,6 +23,7 @@ steps:
 - checkout: git-experiment
   path: git-experiment
 - script: |
+     echo $(Agent.BuildDirectory)
      dir $(Agent.BuildDirectory)/git-experiment
      git tag something 
      git push something
