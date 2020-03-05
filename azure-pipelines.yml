@@ -25,7 +25,13 @@ steps:
      dir git-experiment
      git tag something 
      git push something
-# - checkout: package
-# - script: dir package && git tag something && git push something
-# - checkout: hello-world
-# - script: dir hello-world && git tag something && git push something
+- checkout: package
+- script: |
+     dir package
+     git tag something 
+     git push something
+- checkout: hello-world
+- script: |
+     dir hello-world
+     git tag something 
+     git push something
