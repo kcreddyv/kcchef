@@ -1,0 +1,22 @@
+resources:
+  repositories:
+  - repository: git-experiment
+    type: github
+    name: git-experiment
+    ref: master
+    endpoint: https://github.com/
+  - repository: package
+    type: github
+    name: package
+    ref: master
+    endpoint: https://github.com/
+  - repository: hello-world
+    type: github
+    name: hello-world
+    ref: master
+    endpoint: https://github.com/
+
+steps:
+- checkout: git-experiment
+- checkout: package
+- checkout: hello-world
