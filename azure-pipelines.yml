@@ -23,18 +23,12 @@ steps:
 - checkout: git-experiment
   path: git-experiment
 - script: |
-     cd $(Agent.BuildDirectory)/git-experiment
-     git tag something 
-     git push something
+     cd $(Agent.BuildDirectory)/git-experiment && git tag something && git push something
 - checkout: package
   path: package
 - script: |
-     cd $(Agent.BuildDirectory)/package
-     git tag something 
-     git push something
+     cd $(Agent.BuildDirectory)/package && git tag something && git push something
 - checkout: hello-world
   path: hello-world
 - script: |
-     cd $(Agent.BuildDirectory)/hello-world
-     git tag something 
-     git push something
+     cd $(Agent.BuildDirectory)/hello-world && git tag something && git push something
