@@ -22,8 +22,8 @@ pool:
   vmImage: 'ubuntu-latest'
   
 steps:
-  - ${{ each item in parameters.jobs }}:
-    - script: 'echo ${{ item }}'
+- ${{ each item in parameters.jobs }}:
+  - script: 'echo ${{ item }}'
 # steps:
 #   - ${{ each item in resources.repositories }}:
 #     - script: 'echo ${{ item.repository }}'
