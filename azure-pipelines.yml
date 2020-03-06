@@ -20,8 +20,9 @@ pool:
   vmImage: 'ubuntu-latest'
   
 steps:
-  - ${{each repository in resources.repositories}}
-    - script: 'echo ${{p}}'
+- script: |
+    ${{each repository in resources.repositories}}
+    echo ${{ p }}
 # - checkout: git-experiment
 #   persistCredentials: 'true'
 # - script: |
