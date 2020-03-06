@@ -20,21 +20,23 @@ pool:
   vmImage: 'ubuntu-latest'
   
 steps:
-- checkout: git-experiment
-  persistCredentials: 'true'
-- script: |
-     cd $(Build.SourcesDirectory)/$(Build.Repository.Name)
-     git tag something
-     git push origin something
-- checkout: package
-  persistCredentials: 'true'
-- script: |
-     cd $(Build.SourcesDirectory)/$(Build.Repository.Name)
-     git tag something
-     git push origin something
-- checkout: hello-world
-  persistCredentials: 'true'
-- script: |
-     cd $(Build.SourcesDirectory)/$(Build.Repository.Name) 
-     git tag something
-     git push origin something
+  - ${{each repository in resources.repositories}}
+    - script: 'echo ${{p}}'
+# - checkout: git-experiment
+#   persistCredentials: 'true'
+# - script: |
+#      cd $(Build.SourcesDirectory)/$(Build.Repository.Name)
+#      git tag something
+#      git push origin something
+# - checkout: package
+#   persistCredentials: 'true'
+# - script: |
+#      cd $(Build.SourcesDirectory)/$(Build.Repository.Name)
+#      git tag something
+#      git push origin something
+# - checkout: hello-world
+#   persistCredentials: 'true'
+# - script: |
+#      cd $(Build.SourcesDirectory)/$(Build.Repository.Name) 
+#      git tag something
+#      git push origin something
