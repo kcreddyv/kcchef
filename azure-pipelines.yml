@@ -21,18 +21,21 @@ pool:
   
 steps:
 - checkout: git-experiment
+  path: git-experiment
   persistCredentials: 'true'
 - script: |
      cd $(Agent.BuildDirectory)/git-experiment
      git tag something
      git push origin something
 - checkout: package
+  path: package
   persistCredentials: 'true'
 - script: |
      cd $(Agent.BuildDirectory)/package
      git tag something
      git push origin something
 - checkout: hello-world
+  path: hello-world
   persistCredentials: 'true'
 - script: |
      cd $(Agent.BuildDirectory)/hello-world 
