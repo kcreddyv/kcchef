@@ -21,23 +21,20 @@ pool:
   
 steps:
 - checkout: git-experiment
-  # path: git-experiment
   persistCredentials: 'true'
 - script: |
-     cd $(Build.SourcesDirectory)/git-experiment
+     cd $(Build.SourcesDirectory)/$(Build.Repository.Name)
      git tag something
      git push origin something
 - checkout: package
-  # path: package
   persistCredentials: 'true'
 - script: |
-     cd $(Build.SourcesDirectory)/package
+     cd $(Build.SourcesDirectory)/$(Build.Repository.Name)
      git tag something
      git push origin something
 - checkout: hello-world
-  # path: hello-world
   persistCredentials: 'true'
 - script: |
-     cd $(Build.SourcesDirectory)/hello-world 
+     cd $(Build.SourcesDirectory)/$(Build.Repository.Name) 
      git tag something
      git push origin something
