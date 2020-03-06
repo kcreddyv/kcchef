@@ -24,20 +24,20 @@ steps:
   # path: git-experiment
   persistCredentials: 'true'
 - script: |
-     cd $(Agent.BuildDirectory)/git-experiment
+     cd $(Build.SourcesDirectory)/git-experiment
      git tag something
      git push origin something
 - checkout: package
   # path: package
   persistCredentials: 'true'
 - script: |
-     cd $(Agent.BuildDirectory)/package
+     cd $(Build.SourcesDirectory)/package
      git tag something
      git push origin something
 - checkout: hello-world
   # path: hello-world
   persistCredentials: 'true'
 - script: |
-     cd $(Agent.BuildDirectory)/hello-world 
+     cd $(Build.SourcesDirectory)/hello-world 
      git tag something
      git push origin something
