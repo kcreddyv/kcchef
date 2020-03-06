@@ -1,5 +1,3 @@
-parameters:
-  jobs: ['krish', 'chaitu']
 resources:
   repositories:
   - repository: git-experiment
