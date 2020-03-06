@@ -1,3 +1,5 @@
+parameters:
+  jobs: ['krish', 'chaitu']
 resources:
   repositories:
   - repository: git-experiment
@@ -20,8 +22,11 @@ pool:
   vmImage: 'ubuntu-latest'
   
 steps:
-  - ${{ each item in resources.repositories }}:
-    - script: 'echo ${{ item.repository }}'
+  - ${{ each item in parameters.jobs }}:
+    - script: 'echo ${{ item }}'
+# steps:
+#   - ${{ each item in resources.repositories }}:
+#     - script: 'echo ${{ item.repository }}'
 
 # - checkout: git-experiment
 #   persistCredentials: 'true'
